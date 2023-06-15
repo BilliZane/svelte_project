@@ -5,6 +5,9 @@
   import Playground from './components/Playground.svelte'
   import SomeForm from './components/SomeForm.svelte'
   import HTMLcode from './components/HTMLcode.svelte'
+  import Reactivity from './components/Reactivity.svelte'
+  import TwoWayBindin from './components/TwoWayBindin.svelte'
+  import ConditionalVariables from './components/ConditionalVariables.svelte'
 </script>
 
 <main>
@@ -14,6 +17,9 @@
   <Playground />
   <SomeForm />
   <HTMLcode />
+  <Reactivity />
+  <TwoWayBindin />
+  <ConditionalVariables />
 </main>
 
 <style>
