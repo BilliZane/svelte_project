@@ -8,6 +8,17 @@
   import Reactivity from './components/Reactivity.svelte'
   import TwoWayBindin from './components/TwoWayBindin.svelte'
   import ConditionalVariables from './components/ConditionalVariables.svelte'
+  import PersonsList from './components/PersonsList.svelte'
+  import Person from './components/Person.svelte'
+
+  const people = [
+    { id: 1, name: 'John', age: 23, job: 'Developer' },
+    { id: 2, name: 'Paul', age: 17, job: 'Cleaner' },
+  ]
+
+  let name = 'Johny'
+  let age = 30
+  let jobTitle = 'Seller'
 </script>
 
 <main>
@@ -20,6 +31,13 @@
   <Reactivity />
   <TwoWayBindin />
   <ConditionalVariables />
+  
+  <Person name={people[0].name} age={people[0].age} job={people[0].job} />
+  <Person name={people[1].name} age={people[1].age} job={people[1].job} />
+  <Person {name} {age} job={jobTitle} />
+  <Person {...people[0]} />
+  
+  <PersonsList />
 </main>
 
 <style>
